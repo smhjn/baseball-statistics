@@ -2,16 +2,22 @@
 #include "hitting.h"
 
 hitting::hitting() {
-	std::cout << "Please enter the number of games started: ";
-	std::cin >> gamesStarted;
-	std::cout << std::endl << "Please enter the number of games won: ";
-	std::cin >> gamesWon;
-	std::cout << std::endl << "Please enter the number of games lost: ";
-	std::cin >> gamesLost;
-}
-void hitting::calculate() {
-	gamesStarted = gamesWon + gamesLost;
-	statsWon = gamesWon % gamesStarted;
-
-	std::cout << std::endl << "STATS: " << std::endl << "Total Games: " << gamesStarted << std::endl << "Total Games Won: " << gamesWon << std::endl << "Total Games Lost: " << gamesLost << std::endl << "Percent Won: " << std::endl << "Percent Lost?: " << std::endl;
+    double plateappearance, hits, battedout;
+	
+	double at_bats = hits + battedout;
+	double battingavg = hits / at_bats;
+	double walk = plateappearance - at_bats;
+	
+	cout << "Please enter the number of plate appearances: ";
+	cin >> plateappearance;
+	cout << endl << "Please enter the number of hits: ";
+	cin >> hits;
+	cout << endl << "Please enter the number of batted outs: ";
+	cin >> battedout;
+	    cout << "STATS: " << endl << "Plate Appearances: " << plateappearance;
+	cout << endl << "Hits: " << hits;
+	cout << endl << "Batted Out: " << battedout;
+	cout << endl << "At Bats: " << at_bats;
+	cout << endl << "Batting Average: " << battingavg;
+	cout << endl << "Walk: " << walk << endl;
 }
