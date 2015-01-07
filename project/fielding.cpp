@@ -1,17 +1,25 @@
 #include <iostream>
 #include "fielding.h"
 
-fielding::fielding() {
-	std::cout << "Please enter the number of games started: ";
-	std::cin >> gamesStarted;
-	std::cout << std::endl << "Please enter the number of games won: ";
-	std::cin >> gamesWon;
-	std::cout << std::endl << "Please enter the number of games lost: ";
-	std::cin >> gamesLost;
-}
-void fielding::calculate() {
-	gamesStarted = gamesWon + gamesLost;
-	statsWon = gamesWon % gamesStarted;
+void fielding() {
+    double chances, put_outs, assists;
+    
+     double attempts = put_outs + assists;
+	double fieldingpercent = attempts / chances;
+	double errors = chances - attempts;
+	
+	
+	cout << "Please enter the number of Total chances: ";
+	cin >> chances;
+	cout << endl << "Please enter the number of Put-outs: ";
+	cin >> put_outs;
+	cout << endl << "Please enter the number of assists: ";
+	cin >> assists;
 
-	std::cout << std::endl << "STATS: " << std::endl << "Total Games: " << gamesStarted << std::endl << "Total Games Won: " << gamesWon << std::endl << "Total Games Lost: " << gamesLost << std::endl << "Percent Won: " << std::endl << "Percent Lost?: " << std::endl;
+	cout << "STATS: " << endl << "Chances: " << chances;
+	cout << endl << "Put-outs: " << put_outs;
+	cout << endl << "Assists: " << assists;
+	cout << endl << "Successful attempts: " << attempts;
+	cout << endl << "Fielding Percent: " << fieldingpercent;
+	cout << endl << "Errors: " << errors << endl;
 }
