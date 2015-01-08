@@ -1,7 +1,6 @@
 #include <iostream>
-#include "pitching.h"
 
-pitching::pitching() {
+pitching() {
     double games_started, wins, losses;
 	
 	double decisions = wins + losses;
