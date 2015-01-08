@@ -1,5 +1,4 @@
 #include <iostream>
-#include "fielding.h"
 
 void fielding() {
     double chances, put_outs, assists;
