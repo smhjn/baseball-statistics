@@ -1,7 +1,6 @@
 #include <iostream>
-#include "hitting.h"
 
-hitting::hitting() {
+hitting() {
     double plateappearance, hits, battedout;
 	
 	double at_bats = hits + battedout;
